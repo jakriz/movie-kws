@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  imdb_id: 1
+  title: MyString
+  year: 1
+  gross: 1
+  rank_for_year: 1
+
+two:
+  imdb_id: 1
+  title: MyString
+  year: 1
+  gross: 1
+  rank_for_year: 1
