@@ -17,4 +17,8 @@
 //= require highcharts
 //= require highcharts/highcharts-more
 //= require bootstrap
+//= require lodash
+//= require bloodhound
+//= require typeahead.bundle
+//= require typeahead.jquery
 //= require_tree .

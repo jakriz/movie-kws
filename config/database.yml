@@ -1,17 +1,27 @@
-development:
+default: &default
   adapter: postgresql
   encoding: unicode
-  database: moviekws_development
-  username: postgres
-  password: postgres
+  min_messages: WARNING
+
+development:
+  <<: *default
   host: localhost
   port: 5432
+  username: postgres
+  password: postgres
+  database: moviekws_development
 
 test:
-  adapter: postgresql
-  encoding: unicode
-  database: moviekws_test
-  username: postgres
-  password: postgres
+  <<: *default
   host: localhost
   port: 5432
+  username: postgres
+  password: postgres
+  database: moviekws_test
+  
+production:
+  <<: *default
+  host: db
+  port: 5432
+  username: postgres
+  database: moviekws_production

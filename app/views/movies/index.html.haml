@@ -1,0 +1,14 @@
+.row
+  %form#kw-form{autocomplete: "off", data: {autocomplete_url: autocomplete_keywords_path, dataset_url: keywords_path}}
+    .col-md-9
+      %input#kw-query{type: "text", placeholder: "Type a keyword / phrase", autocomplete: "off"}
+    .col-md-3
+      %input.btn-primary{type: "submit", value: "Add to chart"}
+
+.row
+  .col-md-12
+    #chart
+
+%footer
+  %p
+    #{@movie_count} movies indexed, total amount made $#{number_to_human(@movie_gross)}
