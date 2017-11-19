@@ -2,10 +2,9 @@ require 'open-uri'
 
 module Downloader
   class ListParser
-    BASE_URL = 'http://www.imdb.com/search/title?sort=boxoffice_gross_us&year='
 
     def download_and_save!(year)
-      doc = Nokogiri::HTML(open(url(year), 'X-Forwarded-For' => '52.21.226.101'))
+      doc = Nokogiri::HTML(open(url(year), 'X-Forwarded-For' => '165.225.145.83'))
       doc.css('.lister-item').each_with_index do |block, index|
         movie = parse_movie(year, block, index)
         parse_genres(movie, block)
@@ -17,7 +16,7 @@ module Downloader
     private
 
     def url(year)
-      "#{BASE_URL}#{@year},#{@year}"
+      "http://www.imdb.com/search/title?sort=boxoffice_gross_us&year=#{year}"
     end
 
     def parse_movie(year, block, index)

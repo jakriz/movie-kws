@@ -8,3 +8,9 @@
   %body
     .container
       = yield
+
+  %footer
+    %p
+      #{@movie_count} movies indexed, total amount made $#{number_to_human(@movie_gross)} &#124;
+      %a{href: "https://github.com/jakriz/moviekws"}
+        Github

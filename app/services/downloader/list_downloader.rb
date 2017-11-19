@@ -11,7 +11,7 @@ module Downloader
         sleep(TIMEOUT)
       end
 
-      Keyword.update_movies_count
+      Keyword.update_movies_count_cache
     end
 
     def download_list_for!(year)
